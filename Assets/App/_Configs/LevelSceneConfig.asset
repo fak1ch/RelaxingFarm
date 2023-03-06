@@ -1,0 +1,251 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45370a4786a1452dad191368c501a2fc, type: 3}
+  m_Name: LevelSceneConfig
+  m_EditorClassIdentifier: 
+  GameEventsConfig:
+    durationTillEndLevel: 1
+  mainItemConfig:
+    gameOverNewVelocity: {x: 0, y: 10, z: 0}
+    startVelocity: {x: 0, y: 9.5, z: 67.5}
+  mainItemViewConfig:
+    scaleValueForOnePickableItem: 0.017
+    massValueForOnePickableItem: 0.01
+    cinemachineDistanceForOnePickableItem: 0.005
+    cameraTargetPointOffsetForOnePickableItem: {x: 0, y: 0.003, z: 0}
+  inputSystemConfig:
+    sensitivity: 0.1
+    targetScreenWidth: 768
+  itemContainerConfig:
+    poolData:
+      size: 500
+      container: {fileID: 0}
+      prefab: {fileID: 2323988853793782158, guid: 4fdd3fc449e7336409422ea66ea2d1aa, type: 3}
+    offsetY: 0.65
+    visibleItemCount: 15
+    changeItemCountPerFrame: 10
+  stickmanViewConfig:
+    leftToRightMovementConfig:
+      speedMultiplier: 0.3
+      smoothing: 1
+      minLocalX: -2.5
+      maxLocalX: 2.5
+      maxSpeed: 0.2
+      drag: 5
+    stickmanRotationConfig:
+      rotateSpeed: 1000
+      maxAngleY: 89
+    groundCheckerConfig:
+      groundedOffset: 0.4
+      groundedRadius: 0.25
+      groundLayers:
+        serializedVersion: 2
+        m_Bits: 64
+  forwardSmoothMovementConfig:
+    maxMoveSpeed: 5
+    smoothMoveMultiplier: 3
+  pickableItemConfig:
+    localMoveAnimationDuration: 1
+    localMoveEase: 0
+  levelEndItemsTransferConfig:
+    timeForTransferItems: 3
+    delayBetweenMainItemStartMove: 1
+    itemLocalMoveDuration: 1
+    itemLocalMoveEase: 0
+  stickmanGoalkeeperConfig:
+    delayUntilJump: 0.25
+    forceUp: 250
+    forceForward: 250
+  goalkeeperJointDeactivatorConfig:
+    positionSpringMinValue: 200
+  cloudsGeneratorConfig:
+    leftBottomRectanglePoint: {x: -15, y: 7, z: 3}
+    rightTopRectanglePoint: {x: 15, y: 11, z: 566.01}
+    minDistanceBetweenClouds: 100
+    cloudsCount: 20
+  itemChangerConfig:
+    positiveColor: {r: 0.34901962, g: 1, b: 0.24705882, a: 1}
+    negativeColor: {r: 1, g: 0.24705882, b: 0.24705882, a: 1}
+  levelsListConfig:
+    levelsCellCount: 5
+  moneyViewConfig:
+    animationDuration: 1
+  levelObjectConfigs:
+    destroyableWallConfig:
+      vibrateMilliseconds: 50
+    coinConfig:
+      endLocalPositionOffset: {x: 0, y: 0.01, z: 0}
+      moveDuration: 2
+      endLocalEulerAngles: {x: 0, y: 360, z: 0}
+      rotateDuration: 4
+      addMoneyValue: 1
+    jumpPlaceConfig:
+      yAnimation:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 3.6537535
+          outSlope: 3.6537535
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.055666003
+        - serializedVersion: 3
+          time: 0.5
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: -3.4812124
+          outSlope: -3.4812124
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.059642196
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      zAnimation:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      jumpHeightMultiplierByJumpLength: 0.5
+      jumpDurationMultiplierByJumpLength: 0.15
+      spawnCoins: 1
+      coinCount: 10
+    ExplosiveGeneratorConfig:
+      ExplosionForce: 4000
+      ExplosionRadius: 3
+    trapConfigs:
+      bombConfig:
+        damageInPickableItems: 5
+        vibrateMilliseconds: 500
+        infinityLocalRotationConfig:
+          endLocalEulerAngles: {x: 0, y: 360, z: 0}
+          rotateDuration: 7
+          ease: 1
+      horizontalSawConfig:
+        damageInPickableItems: 1
+        vibrateMilliseconds: 200
+        infinityLocalRotationConfig:
+          endLocalEulerAngles: {x: 0, y: 360, z: 0}
+          rotateDuration: 3
+          ease: 1
+      horizontalSawCircleConfig:
+        damageInPickableItems: 1
+        vibrateMilliseconds: 200
+        infinityLocalRotationConfig:
+          endLocalEulerAngles: {x: 0, y: 360, z: 0}
+          rotateDuration: 5
+          ease: 1
+      verticalSawConfig:
+        damageInPickableItems: 1
+        vibrateMilliseconds: 200
+        infinityLocalRotationConfig:
+          endLocalEulerAngles: {x: 0, y: 0, z: 360}
+          rotateDuration: 3
+          ease: 1
+        infinityLocalMoveXConfig:
+          startX: -2.35
+          endX: 2.35
+          duration: 2
+          ease: 7
+      justSawConfig:
+        damageInPickableItems: 1
+        vibrateMilliseconds: 200
+        infinityLocalRotationConfig:
+          endLocalEulerAngles: {x: 0, y: 0, z: -360}
+          rotateDuration: 3
+          ease: 1
+      spikeConfig:
+        damageInPickableItems: 1
+        vibrateMilliseconds: 200
+      spikesCylinderConfig:
+        damageInPickableItems: 1
+        vibrateMilliseconds: 200
+        infinityLocalRotationConfig:
+          endLocalEulerAngles: {x: 0, y: 0, z: -360}
+          rotateDuration: 3
+          ease: 1
+      spikesCylinderLogConfig:
+        damageInPickableItems: 1
+        vibrateMilliseconds: 200
+        infinityLocalRotationSequenceConfig:
+          startLocalAngle: {x: 0, y: 0, z: 360}
+          endLocalAngle: {x: 0, y: 0, z: -360}
+          duration: 2
+          ease: 4
+          isRelative: 1
+        infinityLocalMoveXConfig:
+          startX: -2.5
+          endX: 2.5
+          duration: 2
+          ease: 4
+      barrierConfig:
+        damageInPickableItems: 1
+        vibrateMilliseconds: 200
+        infinityLocalRotationSequenceConfig:
+          startLocalAngle: {x: 270, y: 0, z: 0}
+          endLocalAngle: {x: 90, y: 0, z: 0}
+          duration: 2
+          ease: 0
+          isRelative: 0
+      hammerConfig:
+        damageInPickableItems: 1
+        vibrateMilliseconds: 200
+        hammerAnimationConfig:
+          startLocalAngle: {x: 0, y: 0, z: 90}
+          endLocalAngle: {x: 0, y: 0, z: 0}
+          liftUpDuration: 1.2
+          liftDownDuration: 1
+          liftUpEase: 6
+          liftDownEase: 30
+          intervalBetweenAnims: 0.15
+  SingletonConfigs:
+    DieCounterConfig:
+      DieCountForShowAd: 1
+  UIConfigs:
+    GameOverPopUpConfig:
+      CoinsBonus: 46
+    GamePassedPopUpConfig:
+      LevelsCountForAd: 3
+      CoinsBonus: 112
+    FreeCoinsButtonConfig:
+      CoinsBonus: 499
